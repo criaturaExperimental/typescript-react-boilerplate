@@ -19,6 +19,12 @@ module.exports = {
   plugins: ['react', '@typescript-eslint'],
   rules: {
     'comma-dangle': ['error', 'never'],
-    'arrow-parens': ['error', 'as-needed']
+    'arrow-parens': ['error', 'as-needed'],
+    'react/jsx-filename-extension': [
+      2,
+      { extensions: ['.js', '.jsx', '.ts', '.tsx'] }
+    ],
+    'jsx-quotes': ['error', 'prefer-single'],
+    'import/extensions': ['warning', 'never']
   }
 };

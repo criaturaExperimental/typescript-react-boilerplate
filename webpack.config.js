@@ -4,7 +4,7 @@ const webpack = require('webpack');
 module.exports = {
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   entry: {
-    app: './src/index.js'
+    app: './src/index.tsx'
   },
   devServer: {
     contentBase: './public',
@@ -13,14 +13,19 @@ module.exports = {
     open: true,
     hot: true
   },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx']
+  },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx|tsx|ts)$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader'
-        }
+        use: [
+          {
+            loader: 'babel-loader'
+          }
+        ]
       }
     ]
   },
