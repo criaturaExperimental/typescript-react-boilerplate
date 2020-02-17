@@ -1,7 +1,7 @@
 {
-  "name": "diecision-maker",
+  "name": "typescript-react-boilerplate",
   "version": "1.0.0",
-  "description": "Let the roll decide",
+  "description": "Clean boilerplate for typescript react",
   "main": "index.js",
   "author": "Lucas deGomez <lucasdegomez@gmail.com>",
   "scripts": {
